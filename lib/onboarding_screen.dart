@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:islami_app/home_screen.dart';
+import 'package:islami_app/cache/cache_helper.dart';
+import 'package:islami_app/home/home_screen.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   static const String routeName = "/";
@@ -42,6 +43,7 @@ class OnBoardingScreen extends StatelessWidget {
       globalBackgroundColor: const Color(0xFF202020),
       showDoneButton: true,
       onDone: () {
+        CacheHelper.saveEligibility();
         Navigator.pushReplacementNamed(context, HomeScreen.routeName);
       },
       done:  Text(
@@ -58,7 +60,7 @@ class OnBoardingScreen extends StatelessWidget {
         style: GoogleFonts.elMessiri(
           fontSize: 16.0,
           fontWeight: FontWeight.bold,
-          color: Color(0xFFE2BE7F),
+          color: Color(0xFFE2BE7F)
         ),
       ),
       showBackButton: true,

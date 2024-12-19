@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_app/models/sura_model.dart';
 
 class SuraListItems extends StatelessWidget {
-  String nameAr;
-  String nameEn;
-  String versesNum;
-  int index;
+  SuraModel model;
 
-  SuraListItems(
-      {required this.nameAr,
-      required this.index,
-      required this.nameEn,
-      required this.versesNum,
-      super.key});
+  SuraListItems({required this.model, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +21,7 @@ class SuraListItems extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 4),
-              child: Text("${index + 1}",
+              child: Text("${model.index + 1}",
                   style: GoogleFonts.elMessiri(
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
@@ -37,13 +30,15 @@ class SuraListItems extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(width: 24,),
+        SizedBox(
+          width: 24,
+        ),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                nameEn,
+                model.namesEn,
                 style: GoogleFonts.elMessiri(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -51,7 +46,7 @@ class SuraListItems extends StatelessWidget {
                 ),
               ),
               Text(
-                "$versesNum Verses",
+                "${model.numOfVerses} Verses",
                 style: GoogleFonts.elMessiri(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
@@ -62,7 +57,7 @@ class SuraListItems extends StatelessWidget {
           ),
         ),
         Text(
-          nameAr,
+          model.namesAr,
           style: GoogleFonts.elMessiri(
             fontSize: 20,
             fontWeight: FontWeight.w700,

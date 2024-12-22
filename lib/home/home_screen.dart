@@ -27,14 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color(0xFFE2BE7F),
-          showSelectedLabels: true,
-          showUnselectedLabels: false,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Color(0xFF202020),
-          type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,
           onTap: (value) {
             currentIndex = value;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/cache/cache_helper.dart';
 import 'package:islami_app/home/home_screen.dart';
 import 'package:islami_app/onboarding_screen.dart';
+import 'package:islami_app/sura_details/sura_details.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         OnBoardingScreen.routeName : (context) => OnBoardingScreen(),
         HomeScreen.routeName : (context) => HomeScreen(),
+        SuraDetails.routeName : (context) => SuraDetails(),
       },
     );
   }

@@ -5,32 +5,6 @@ class SuraModel {
   String namesEn;
   String numOfVerses;
   int index;
-
-  SuraModel({
-    required this.namesAr,
-    required this.namesEn,
-    required this.numOfVerses,
-    required this.index,
-  });
-
-  static int get length => suraNamesAr.length;
-
-  static SuraModel getSelectedSuraModel(int index) {
-    return SuraModel(
-        namesAr: suraNamesAr[index],
-        namesEn: searchResult[index],
-        numOfVerses: versesNumbers[index],
-        index: index);
-  }
-
-  static SuraModel getSuraModel(int index) {
-    return SuraModel(
-        namesAr: suraNamesAr[index],
-        namesEn: suraNamesEn[index],
-        numOfVerses: versesNumbers[index],
-        index: index);
-  }
-
   static List<String> searchResult = [];
   static List<String> suraNamesAr = [
     "الفاتحه",
@@ -380,4 +354,31 @@ class SuraModel {
     '5',
     '6'
   ];
+
+  SuraModel({
+    required this.namesAr,
+    required this.namesEn,
+    required this.numOfVerses,
+    required this.index,
+  });
+
+  static int get length => suraNamesAr.length;
+
+  static SuraModel getSelectedSuraModel(int index) {
+    return SuraModel(
+        namesAr: suraNamesAr[index],
+        namesEn: searchResult[index],
+        numOfVerses: versesNumbers[index],
+        index: index);
+  }
+
+  static SuraModel getSuraModel(int index) {
+    return SuraModel(
+        namesAr: suraNamesAr[index],
+        namesEn: suraNamesEn[index],
+        numOfVerses: versesNumbers[index],
+        index: index);
+  }
+
+
 }

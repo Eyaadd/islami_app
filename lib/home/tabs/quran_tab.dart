@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/home/tabs/quran_tab_sura_list_items_horizontally.dart';
 import 'package:islami_app/home/tabs/quran_tab_sura_list_items_vertically.dart';
+import 'package:islami_app/sura_details/sura_details.dart';
 
 import '../../models/sura_model.dart';
 
@@ -99,10 +100,17 @@ class _QuranTabState extends State<QuranTab> {
                 itemBuilder: (context, index) {
                   return Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: SuraListItems(
-                        model: searchController.text.isNotEmpty
-                            ? SuraModel.getSelectedSuraModel(index)
-                            : SuraModel.getSuraModel(index),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, SuraDetails.routeName,
+                              arguments: SuraModel.getSuraModel(index));
+                        },
+                        child: SuraListItems(
+                          model: searchController.text.isNotEmpty
+                              ? SuraModel.getSelectedSuraModel(index)
+                              : SuraModel.getSuraModel(index),
+                        ),
                       ));
                 },
                 separatorBuilder: (context, index) => Divider(

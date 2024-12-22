@@ -43,7 +43,6 @@ class _QuranTabState extends State<QuranTab> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset("assets/images/header.png"),
           searchItem(),
           SizedBox(height: 10),
           if (SuraModel.searchResult.isEmpty &&

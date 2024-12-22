@@ -56,7 +56,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        body: tabs[currentIndex],
+        body:Column(
+          children: [
+            Image.asset("assets/images/header.png"),
+            Expanded(child: tabs[currentIndex]),
+          ],
+        ),
       ),
     );
   }

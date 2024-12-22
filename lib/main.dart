@@ -6,6 +6,8 @@ import 'package:islami_app/my_theme_data.dart';
 import 'package:islami_app/onboarding_screen.dart';
 import 'package:islami_app/sura_details/sura_details.dart';
 
+import 'hadeeth_details/hadeeth_details.dart';
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
         OnBoardingScreen.routeName : (context) => OnBoardingScreen(),
         HomeScreen.routeName : (context) => HomeScreen(),
         SuraDetails.routeName : (context) => SuraDetails(),
+        HadeethDetails.routeName : (context) => HadeethDetails(),
       },
     );
   }

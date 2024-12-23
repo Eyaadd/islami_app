@@ -31,7 +31,7 @@ class _AhadeethTabState extends State<AhadeethTab> {
                           arguments: hadeeth);
                     },
                     child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 12),
+                      margin: EdgeInsets.symmetric(horizontal: 10),
                       child: Stack(
                         alignment: Alignment.topCenter,
                         children: [

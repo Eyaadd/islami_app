@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyThemeData {
-  static const Color primaryColor = Color(0xFFE2BE7F);
   static const Color blackColor = Color(0xFF202020);
+  static const Color primaryColor = Color(0xFFE2BE7F);
   static ThemeData lightTheme = ThemeData(
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.transparent,

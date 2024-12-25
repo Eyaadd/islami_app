@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body:Column(
           children: [
-            Image.asset("assets/images/header.png"),
+            Center(child: Image.asset("assets/images/header.png")),
             Expanded(child: tabs[currentIndex]),
           ],
         ),
